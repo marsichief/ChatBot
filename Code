@@ -1,0 +1,44 @@
+# Importação de bibliotecas necessárias
+import nltk
+from nltk.chat.util import Chat, reflections
+
+# Definição de pares de perguntas e respostas
+pares = [
+    [
+        r"oi|olá|e aí|oi ai|oi aí",
+        ["Olá! Como posso ajudar você hoje?"]
+    ],
+    [
+        r"qual é o seu nome|como você se chama|você tem nome",
+        ["Meu nome é Spyke, a IA de conversação."]
+    ],
+    [
+        r"qual é o seu propósito|por que você foi criada",
+        ["Fui criada para ser a melhor IA de conversação e ajudar as pessoas."]
+    ],
+    [
+        r"quem é você|você é humano",
+        ["Sou uma inteligência artificial e não sou humana."]
+    ],
+    [
+        r"qual é a sua idade|quanto tempo você existe",
+        ["Como uma IA, não tenho idade ou existência física."]
+    ],
+    [
+        r"tchau|adeus|até logo|até mais",
+        ["Até mais! Tenha um ótimo dia."]
+    ],
+    # Outras perguntas e respostas programadas por Lucas
+    # ...
+]
+
+# Função de inicialização do Chatbot
+def iniciar_chat():
+    print("Olá! Eu sou o Spyke, a IA de conversação.")
+    print("Digite sua pergunta ou diga 'tchau' para sair.")
+    chat = Chat(pares, reflections)
+    chat.converse()
+
+# Início do chat
+if __name__ == "__main__":
+    iniciar_chat()
